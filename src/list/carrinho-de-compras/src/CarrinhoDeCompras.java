@@ -59,8 +59,20 @@ public class CarrinhoDeCompras {//representando carrinho de compras online
 
     public static void main(String[] args) {
         CarrinhoDeCompras carrinhoDeCompras = new CarrinhoDeCompras();
-        System.out.println("TOTAL DO CARRINHO: " + carrinhoDeCompras.calcularValorTotal());
-        carrinhoDeCompras.removerItem("arroz");
+        carrinhoDeCompras.adicionarItem("Arroz", 18.99, 2);
+        carrinhoDeCompras.adicionarItem("Feijão", 10.90, 3);
+        carrinhoDeCompras.adicionarItem("Macarrão", 3.49, 5);
+        carrinhoDeCompras.adicionarItem("Leite", 4.49, 6);
+
+        System.out.println("Total compras: " + carrinhoDeCompras.calcularValorTotal());
+
+        carrinhoDeCompras.removerItem("macarrão");
+
+        System.out.println("Atualização do total compras: " + carrinhoDeCompras.calcularValorTotal());
+
         carrinhoDeCompras.exibirItens();
+
+
+
     }
 }
